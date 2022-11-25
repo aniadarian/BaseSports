@@ -1,0 +1,54 @@
+CREATE TABLE Arbitro(
+Id_arbitro bigint auto_increment primary key not null,
+Nombre varchar(100) not null,
+Contrasenia varchar(30) not null,
+Correo varchar(100) not null
+);
+
+CREATE TABLE Equipo(
+  Nom_equipo varchar(50),
+  Id_equipo bigint  primary key auto_increment,
+
+
+  Nom_capitan varchar(50) not null,
+  Dorsal_capitan tinyint not null,
+  Posicion_capitan varchar(30) not null,
+  No_control_capitan bigint not null,
+  
+  Nom_jugador_uno varchar(50) not null,
+  Dorsal_uno tinyint not null,
+  Posicion_uno varchar(50) not null,
+  No_control_uno bigint not null,
+  
+  Nom_jugador_dos varchar(50) not null,
+  Dorsal_dos tinyint not null,
+  Posicion_dos varchar(50) not null,
+  No_control_dos bigint not null,
+  
+  Nom_jugador_tres varchar(50),
+  Dorsal_tres tinyint,
+  Posicion_tres varchar(50),
+  No_control_tres bigint,
+  
+  Nom_jugador_cuatro varchar(50),
+  Dorsal_cuatro tinyint,
+  Posicion_cuatro varchar(50),
+  No_control_cuatro bigint
+);
+
+CREATE TABLE Generar_partido(
+  Equipo_uno varchar(50) not null,
+  Equipo_dos varchar(50) not null,
+  fecha_partido date not null,
+  hora_partido time not null,
+  id_partido bigint auto_increment primary key not null
+);
+
+CREATE TABLE Monitorear_partido(
+ id_partidoFK,
+ Id_arbitroFK,
+ CONSTRAINT id_partidoFK FOREIGN KEY (id_partidoFK)
+ REFERENCES Generar_partido(id_partido),
+ CONSTRAINT Id_arbitroFK FOREIGN KEY (Id_arbitroFK)
+ REFERENCES Arbitro(Id_arbitro),
+);
