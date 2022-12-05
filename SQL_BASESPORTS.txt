@@ -1,7 +1,6 @@
-CREATE TABLE Arbitro(
-Id_arbitro bigint auto_increment primary key not null,
-Usuario varchar(100) not null,
-Contrasenia varchar(30) not null
+CREATE TABLE Jugador(
+No_control bigint primary key,
+Nombre varchar(100) not null
 );
 
 CREATE TABLE Equipo_basquet(
