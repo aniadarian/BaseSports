@@ -1,3 +1,10 @@
+CREATE TABLE administrador(
+usuario varchar(100) primary key,
+contrasenia varchar(100) not null
+);
+
+INSERT INTO `administrador` (`usuario`, `contrasenia`) VALUES ('administradorsupremo', 'arribalosdeportes123');
+
 CREATE TABLE Jugador(
 No_control bigint primary key,
 Nombre varchar(100) not null
