@@ -1,8 +1,7 @@
 CREATE TABLE Arbitro(
 Id_arbitro bigint auto_increment primary key not null,
-Nombre varchar(100) not null,
-Contrasenia varchar(30) not null,
-Correo varchar(100) not null
+Usuario varchar(100) not null,
+Contrasenia varchar(30) not null
 );
 
 CREATE TABLE Equipo_basquet(
@@ -10,33 +9,57 @@ CREATE TABLE Equipo_basquet(
   Id_equipo bigint  primary key auto_increment,
 
 
-  Nom_capitan varchar(50) not null,
-  Dorsal_capitan tinyint not null,
-  Posicion_capitan varchar(30) not null,
-  No_control_capitan bigint not null,
+  Nom_capitan varchar(50),
+  No_control_capitan bigint,
   
-  Nom_jugador_uno varchar(50) not null,
-  Dorsal_uno tinyint not null,
-  Posicion_uno varchar(50) not null,
-  No_control_uno bigint not null,
+  Nom_jugador_uno varchar(50),
+  No_control_uno bigint,
   
-  Nom_jugador_dos varchar(50) not null,
-  Dorsal_dos tinyint not null,
-  Posicion_dos varchar(50) not null,
-  No_control_dos bigint not null,
+  Nom_jugador_dos varchar(50),
+  No_control_dos bigint,
   
   Nom_jugador_tres varchar(50),
-  Dorsal_tres tinyint,
-  Posicion_tres varchar(50),
   No_control_tres bigint,
   
   Nom_jugador_cuatro varchar(50),
-  Dorsal_cuatro tinyint,
-  Posicion_cuatro varchar(50),
   No_control_cuatro bigint
 );
 
+CREATE TABLE Equipo_voleibol(
+  Nom_equipo varchar(50) NOT NULL,
+  Id_equipo bigint  primary key auto_increment,
 
+
+  Nom_capitan varchar(50),
+  No_control_capitan bigint,
+  
+  Nom_jugador_uno varchar(50),
+  No_control_uno bigint,
+  
+  Nom_jugador_dos varchar(50),
+  No_control_dos bigint,
+  
+  Nom_jugador_tres varchar(50),
+  No_control_tres bigint,
+  
+   Nom_jugador_cuatro varchar(50),
+  No_control_cuatro bigint,
+  
+   Nom_jugador_cinco varchar(50),
+  No_control_cinco bigint,
+  
+   Nom_jugador_seis varchar(50),
+  No_control_seis bigint,
+  
+  Nom_jugador_siete varchar(50),
+  No_control_siete bigint,
+  
+  Nom_jugador_ocho varchar(50),
+  No_control_ocho bigint,
+  
+  Nom_jugador_nueve varchar(50),
+  No_control_nueve bigint
+);
 
 
 
@@ -45,135 +68,49 @@ CREATE TABLE Equipo_futbol(
   Id_equipo bigint  primary key auto_increment,
 
 
-  Nom_capitan varchar(50) not null,
-  Dorsal_capitan tinyint not null,
-  Posicion_capitan varchar(30) not null,
-  No_control_capitan bigint not null,
+  Nom_capitan varchar(50),
+  No_control_capitan bigint,
   
-  Nom_jugador_uno varchar(50) not null,
-  Dorsal_uno tinyint not null,
-  Posicion_uno varchar(50) not null,
-  No_control_uno bigint not null,
+  Nom_jugador_uno varchar(50),
+  No_control_uno bigint,
   
-  Nom_jugador_dos varchar(50) not null,
-  Dorsal_dos tinyint not null,
-  Posicion_dos varchar(50) not null,
-  No_control_dos bigint not null,
+  Nom_jugador_dos varchar(50),
+  No_control_dos bigint,
   
-  Nom_jugador_tres varchar(50) not null,
-  Dorsal_tres tinyint not null,
-  Posicion_tres varchar(50) not null,
-  No_control_tres bigint not null,
+  Nom_jugador_tres varchar(50),
+  No_control_tres bigint,
   
-   Nom_jugador_cuatro varchar(50) not null,
-  Dorsal_cuatro tinyint not null,
-  Posicion_cuatro varchar(50) not null,
-  No_control_cuatro bigint not null,
+   Nom_jugador_cuatro varchar(50),
+  No_control_cuatro bigint,
   
-   Nom_jugador_cinco varchar(50) not null,
-  Dorsal_cinco tinyint not null,
-  Posicion_cinco varchar(50) not null,
-  No_control_cinco bigint not null,
+   Nom_jugador_cinco varchar(50),
+  No_control_cinco bigint,
   
-   Nom_jugador_seis varchar(50) not null,
-  Dorsal_seis tinyint not null,
-  Posicion_seis varchar(50) not null,
-  No_control_seis bigint not null,
+   Nom_jugador_seis varchar(50),
+  No_control_seis bigint,
   
-  Nom_jugador_siete varchar(50) not null,
-  Dorsal_siete tinyint not null,
-  Posicion_siete varchar(50) not null,
-  No_control_siete bigint not null,
+  Nom_jugador_siete varchar(50),
+  No_control_siete bigint,
   
-  Nom_jugador_ocho varchar(50) not null,
-  Dorsal_ocho tinyint not null,
-  Posicion_ocho varchar(50) not null,
-  No_control_ocho bigint not null,
+  Nom_jugador_ocho varchar(50),
+  No_control_ocho bigint,
   
-  Nom_jugador_nueve varchar(50) not null,
-  Dorsal_nueve tinyint not null,
-  Posicion_nueve varchar(50) not null,
-  No_control_nueve bigint not null
+  Nom_jugador_nueve varchar(50),
+  No_control_nueve bigint
 );
-
-
-
-
-
-
-CREATE TABLE Equipo_voleibol(
-  Nom_equipo varchar(50) NOT NULL,
-  Id_equipo bigint  primary key auto_increment,
-
-
-  Nom_capitan varchar(50) not null,
-  Dorsal_capitan tinyint not null,
-  Posicion_capitan varchar(30) not null,
-  No_control_capitan bigint not null,
-  
-  Nom_jugador_uno varchar(50) not null,
-  Dorsal_uno tinyint not null,
-  Posicion_uno varchar(50) not null,
-  No_control_uno bigint not null,
-  
-  Nom_jugador_dos varchar(50) not null,
-  Dorsal_dos tinyint not null,
-  Posicion_dos varchar(50) not null,
-  No_control_dos bigint not null,
-  
-  Nom_jugador_tres varchar(50) not null,
-  Dorsal_tres tinyint not null,
-  Posicion_tres varchar(50) not null,
-  No_control_tres bigint not null,
-  
-   Nom_jugador_cuatro varchar(50) not null,
-  Dorsal_cuatro tinyint not null,
-  Posicion_cuatro varchar(50) not null,
-  No_control_cuatro bigint not null,
-  
-   Nom_jugador_cinco varchar(50) not null,
-  Dorsal_cinco tinyint not null,
-  Posicion_cinco varchar(50) not null,
-  No_control_cinco bigint not null,
-  
-   Nom_jugador_seis varchar(50) not null,
-  Dorsal_seis tinyint not null,
-  Posicion_seis varchar(50) not null,
-  No_control_seis bigint not null,
-  
-  Nom_jugador_siete varchar(50) not null,
-  Dorsal_siete tinyint not null,
-  Posicion_siete varchar(50) not null,
-  No_control_siete bigint not null,
-  
-  Nom_jugador_ocho varchar(50) not null,
-  Dorsal_ocho tinyint not null,
-  Posicion_ocho varchar(50) not null,
-  No_control_ocho bigint not null,
-  
-  Nom_jugador_nueve varchar(50) not null,
-  Dorsal_nueve tinyint not null,
-  Posicion_nueve varchar(50) not null,
-  No_control_nueve bigint not null
-);
-
-
 
 
 CREATE TABLE Generar_partido_basket(
   Equipo_uno varchar(50) not null,
   Equipo_dos varchar(50) not null,
   fecha_partido date not null,
-  hora_partido time not null,
   id_partido bigint auto_increment primary key not null
 );
-
 
 CREATE TABLE Generar_partido_futbol(
   Equipo_uno varchar(50) not null,
   Equipo_dos varchar(50) not null,
   fecha_partido date not null,
-  hora_partido time not null,
   id_partido bigint auto_increment primary key not null
 );
 
@@ -182,6 +119,5 @@ CREATE TABLE Generar_partido_voleibol(
   Equipo_uno varchar(50) not null,
   Equipo_dos varchar(50) not null,
   fecha_partido date not null,
-  hora_partido time not null,
   id_partido bigint auto_increment primary key not null
 );
